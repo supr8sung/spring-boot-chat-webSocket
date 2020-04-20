@@ -7,6 +7,9 @@ import org.springframework.messaging.handler.annotation.SendTo;
 import org.springframework.messaging.simp.SimpMessageHeaderAccessor;
 import org.springframework.stereotype.Controller;
 
+import java.util.HashMap;
+import java.util.Map;
+
 @Controller
 public class WebSocketChatController {
     @MessageMapping("/chat.send")
@@ -22,6 +25,9 @@ public class WebSocketChatController {
                                         SimpMessageHeaderAccessor headerAccessor) {
 
         headerAccessor.getSessionAttributes().put("username", webSocketChatMessage.getSender());
+        headerAccessor.getSessionId();
+        Map<String,String> map=new HashMap<>();
+        map.put(headerAccessor.getDestination(),webSocketChatMessage.toString());
         return webSocketChatMessage;
     }
 }
