@@ -17,6 +17,7 @@ body {
 	color: #333;
 	background-color: #f4f4f4;
 	height: 100%;
+	overflow: scroll;
 }
 .clearfix:after {
 	display: block;
@@ -39,6 +40,13 @@ h1 {
 }
 a {
 	color: #128ff2;
+}
+
+#usersList{
+    display:flex;
+}
+#usersList a{
+    margin:10px;
 }
 button {
 	box-shadow: none;

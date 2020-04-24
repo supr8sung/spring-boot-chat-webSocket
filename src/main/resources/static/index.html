@@ -21,6 +21,13 @@
         </form>
     </div>
 </div>
+
+<div>
+    <h3>User List</h3>
+    <ul id="usersList">
+    </ul>
+    <button onclick="fetchAll()">Refresh</button>
+</div>
 <div id="dialogue-page" class="hidden">
     <div class="dialogue-container">
         <div class="dialogue-header">
@@ -29,6 +36,7 @@
         <ul id="messageList">
         </ul>
         <form id="dialogueForm" name="dialogueForm" nameForm="dialogueForm">
+            <h2 id="selectedUserId"></h2>
             <div class="form-group">
                 <div class="input-group clearfix">
                     <input type="text" id="chatMessage" placeholder="Enter a message...." autocomplete="off" class="form-control" />
