@@ -21,7 +21,7 @@ public class WebSocketChatConfig implements WebSocketMessageBrokerConfigurer {
 
 //        WebSocketMessageBrokerConfigurer.super.configureMessageBroker(registry);
 
-        registry.enableSimpleBroker("/topic");
+        registry.enableSimpleBroker("/topic/", "/queue/");
         registry.setApplicationDestinationPrefixes("/app");
 
 //        registry.setApplicationDestinationPrefixes("/app");

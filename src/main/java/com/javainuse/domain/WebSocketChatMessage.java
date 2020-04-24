@@ -1,37 +1,30 @@
 package com.javainuse.domain;
 
 public class WebSocketChatMessage {
-    private String type;
-    private String content;
-    private String sender;
+    private String message;
+    private String fromLogin;
 
-    public String getType() {
-
-        return type;
+    public String getMessage() {
+        return message;
     }
 
-    public void setType(String type) {
-
-        this.type = type;
+    public void setMessage(String message) {
+        this.message = message;
     }
 
-    public String getContent() {
-
-        return content;
+    public String getFromLogin() {
+        return fromLogin;
     }
 
-    public void setContent(String content) {
-
-        this.content = content;
+    public void setFromLogin(String fromLogin) {
+        this.fromLogin = fromLogin;
     }
 
-    public String getSender() {
-
-        return sender;
-    }
-
-    public void setSender(String sender) {
-
-        this.sender = sender;
+    @Override
+    public String toString() {
+        return "MessageModel{" +
+                "message='" + message + '\'' +
+                ", fromLogin='" + fromLogin + '\'' +
+                '}';
     }
 }
